@@ -5,11 +5,11 @@
 
 nav {
     font-family: "Roboto", sans-serif;
-    font-optical-sizing: auto;
+    font-optical-sizing: auto; /* este estilo qué significa? */
     font-weight: 700;
     font-style: normal;
-    font-variation-settings:
-    "wdth" 100;
+    font-variation-settings: /* propieda vacía, este error se repite*/
+    "wdth" 100; /* mal escrito, este error se repite*/
 }
 h1 {
     font-family: "Cal Sans", sans-serif;
