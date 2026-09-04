@@ -13,54 +13,83 @@
 
 <body>
     <header>
+        <div class="contenedor-encabezado">
+        <img src="img/logo.png" alt="Logo" width="120px" height="120px">
         <nav>
-            <img src="img/LOGO.png" alt="Logo" width="40px" height="40px">
-            <a href="#">Sobre mi</a>
+            <a href="#sobre-mi" target="_self">Sobre mi</a>
+            <!--Falta el enlace a Proyectos y Contacto-->
             <a href="#">Proyectos</a>
             <a href="#">Contacto</a>
         </nav>
+        </div>
     </header>
     <main>
-        <section>
-            <h1>Maia Abril Carro</h1>
-            <h2>¡Hola!, mi nombre es Maia. Soy estudiante de Diseño y Comunicación Visual en la UNLa</h2>
-        </section>
+        <article class="presentacion">
+            <div class="contenedor-presentacion">
+                <div class="columna-izquierda-presentacion">
+                <img src="img/foto-de-maia.jpg" alt="Foto de Maia Abril Carro" width="230px" height="310px">
+                </div>
+                <div class="columna-derecha-presentacion">
+                <h1>Maia Abril</h1>
+                <h1>Carro</h1>
+                <h2>¡Hola!, mi nombre es Maia. Soy estudiante de Diseño y Comunicación Visual en la UNLa</h2>
+                </div>
+            </div> 
+        </article>
 
-        <article>
-            <h3>SOBRE MÍ</h3>
-            <p>Actualmente me encuentro cursando la Licenciatura en Diseño y Comunicación Visual en la Universidad
+        <section class="contenedor-sobremi">
+            <article class="contenedor-izquierdo-sobre-mi">
+                <div class="#sobremi" id="sobre-mi">
+                <h5>SOBRE MÍ</h5>
+                <p>Actualmente me encuentro cursando la Licenciatura en Diseño y Comunicación Visual en la Universidad
                 Nacional de Lanús. A lo largo de mi formación académica he desarrollado proyectos vinculados
                 principalmente al diseño editorial, la identidad visual, la tipografía y la comunicación gráfica. Cuento
                 con un emprendimiento personal de papelería, donde aplico mis conocimientos de diseño en la creación y
                 producción de diferentes productos gráficos. Esta experiencia me permitió desarrollar habilidades
                 relacionadas no solo con el diseño, sino también con la organización, la planificación y la gestión de
                 un proyecto propio.</p>
+                </div>
+                <div> 
+                <h3 class="formacion-academica">FORMACIÓN ACADÉMICA</h3>
+                <ul>
+                    <li>Licenciatura en Diseño y Comunicación Visual / UNLa (2024 - En curso)</li>
+                    <li>Bachiller de Economía y Administración / NCG (2018 - 2023)</li>
+                </ul>
+                </div>
+            </article>
+        <article class="contenedor-derecho-sobre-mi">
+            <div>
+            <h3 class="software">SOFTWARE</h3>
+                <ul>
+                    <li>Adobe Illustrator / Avanzado</li>
+                    <li>Adobe Photoshop / Intermedio</li>
+                    <li>Adobe InDesign / Intermedio</li>
+                    <li>Microsoft Office / Avanzado</li>
+                </ul>
+            </div>
+            <div>
+            <h3 class="experiencia">EXPERIENCIA</h3>
+            <h4 class="emprendimiento">Emprendimiento de papelería / Proyecto independiente (2025- Actualidad)</h4>
+                <ul>    
+                    <li>Diseño y desarrollo de productos de papelería.</li>
+                    <li>Creación de piezas gráficas y material para redes sociales.</li>
+                    <li>Organización y gestión de pedidos.</li>
+                    <li>Atención y comunicación con clientes.</li>
+                </ul>
+            </div>
         </article>
-        <section>
-            <h3>EXPERIENCIA</h3>
-            <h4>Emprendimiento de papelería / Proyecto independiente (2025- Actualidad)</h4>
-            <p>• Diseño y desarrollo de productos de papelería.</p>
-            <p>• Creación de piezas gráficas y material para redes sociales.</p>
-            <p>• Organización y gestión de pedidos.</p>
-            <p>• Atención y comunicación con clientes.</p>
         </section>
-        <section>
-            <h3>SOFTWARE</h3>
-            <p>• Adobe Illustrator</p>
-            <p>• Adobe Photoshop</p>
-            <p>• Adobe InDesign</p>
-            <p>• Microsoft Office</p>
-        </section>
-        <section>
-            <h3>FORMACIÓN ACADÉMICA</h3>
-            <p>Licenciatura en Diseño y Comunicación Visual / UNLa (2024 - En curso)</p>
-            <p>Bachiller de Economía y Administración / NCG (2018 - 2023)</p>
-        </section>
+    
     </main>
-    <footer>
+    <footer id="footer">
+        <h6 class="gracias-por-ver">¡Gracias por ver!</h6>
         <p>© 2026 Carro, Maia Abril — Todos los derechos reservados.</p>
+        <div id="redes-sociales">
+            <a href="https://www.instagram.com/maaaaidg_/" target="_blank"><img src="img/logo-instagram.png" alt="Logo Instagram" width="40px" height="40px"></a>
+            <a href="https://www.behance.net/maiacarro" target="_blank"><img src="img/logo-behance.png" alt="Logo Behance" width="40px" height="40px"></a>
+        </div>
         <p>Cátedra Wischñevsky 2026</p>
-        <img src="img/Universidad_Nacional_de_Lanús_logo.png" alt="Logo UNLa" width="40px" height="40px">
+        <img src="img/universidad-nacional-de-lanus-logo.png" alt="Logo UNLa" width="40px" height="40px">
     </footer>
 </body>
 

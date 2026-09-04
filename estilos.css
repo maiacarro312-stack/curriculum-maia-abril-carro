@@ -5,35 +5,32 @@
 
 nav {
     font-family: "Roboto", sans-serif;
-    font-optical-sizing: auto;
     font-weight: 700;
     font-style: normal;
-    font-variation-settings:
-    "wdth" 100;
+    font-size: 1.5rem;
+    display: flex;
+    gap: 60px;
 }
+
 h1 {
     font-family: "Cal Sans", sans-serif;
-    font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
-    font-size: 3.2rem;
+    font-size: 3.5rem;
     color: #4c0160;
 }
 h2{
     font-family: "Roboto", sans-serif;
-    font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
-    font-variation-settings:
-    "wdth" 100;
+    color:#875d92;
+    padding-top: 30px;
+
 }
 p{
     font-family: "Roboto", sans-serif;
-    font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
-    font-variation-settings:
-    "wdth" 100;
     text-wrap: balance;
     line-height: 1.5rem;
 }
@@ -43,19 +40,134 @@ h3{
     font-style: normal;
     font-size: 1.5rem;
     color: #875d92;
-
 }
 
 h4{
     font-family: "Roboto", sans-serif;
-    font-optical-sizing: auto;
     font-weight: 500;
     font-style: italic;
-    font-variation-settings:"wdth" 100;
     font-size: 1.2rem;
     color: #875d92;
 }
+
+h5{
+    font-family: "Cal Sans", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 2.5rem;
+    color: #875d92;
+    padding-bottom: 20px;
+    max-width: 50%;
+}
+
+h6{
+    font-family: "Cal Sans", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 2.5rem;
+    color: #ffffff;
+    padding-bottom: 20px;
+    max-width: 50%;
+}
+
 a{
     text-decoration: none;
-    color: #4c0160;
+    color: #fee9ff;
+    
+}
+li{
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 2rem;
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header{
+    display: flex;
+    padding: 5px;
+    background: #875d92;
+}
+
+.contenedor-encabezado{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 120%;
+    max-width: 1750 px;
+    padding: 10px;
+}
+
+.presentacion{
+    background: #fee9ff;
+    padding: 40px;
+}
+
+.contenedor-presentacion{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 45px;
+}
+
+.columna-izquierda-presentacion{
+    padding: 50px;
+}
+
+.columna-derecha-presentacion{
+    max-width: 40%;
+    padding: 35px 10px 10px 10px;
+}
+
+.contenedor-sobremi{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    column-gap: 8%;
+    padding: 50px 50px 70px 50px;
+}
+
+.contenedor-izquierdo-sobre-mi{
+    display: flex;
+    flex-direction: column;
+    max-width: 44%;
+}
+
+.formacion-academica{
+    margin-top: 50px;
+}
+
+.contenedor-derecho-sobre-mi{
+    display: flex;
+    flex-direction: column;
+}
+
+.software{
+    margin-top: 20px;
+    margin-bottom: 5px;
+}
+
+.experiencia{
+    margin-top: 20px;
+    margin-bottom: 5px;
+}
+
+.emprendimiento{
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+#footer{
+    background-color: #4c0160;
+    color: #fee9ff;
+    display: flex;
+    padding: 40px 80px 30px 90px;
+    align-items: center;
+    gap:15rem;
 }
