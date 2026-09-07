@@ -4,28 +4,28 @@
 <head>
     <meta charset="utf-8" />
     <title>Maia Abril Carro - CV</title>
+    <link rel="icon" href="img/logo-icon.svg" type="image/logo-icon" sizes="16x16" alt="favicon-cvmaia">
     <link rel="stylesheet" href="estilos.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Cal+Sans&family=Roboto:ital,wdth,wght@0,75..100,100..900;1,75..100,100..900&display=swap');
 
-</style> 
-<!--falta el favicon! y guarda el indentado del head-->
+    </style> 
 </head>
 
 <body>
     <header>
-        <div class="contenedor-encabezado">
-        <img src="img/logo-emprendimiento.png" alt="Logo" width="120px" height="120px">
-        <nav>
+        <nav class="botonera">
+            <div class="logo-emprendimiento">
+            <img src="img/logo-emprendimiento.png" alt="Logo" width="120px" height="120px">
+            </div>
+        <nav class="menu">
             <a href="#sobre-mi" target="_self">Sobre mi</a>
-            <!--Falta el enlace a Proyectos y Contacto-->
-            <a href="#">Proyectos</a>
-            <a href="#">Contacto</a>
+            <a href="https://www.behance.net/maiacarro" target="_blank">Behance</a>
         </nav>
         </div>
     </header>
     <main>
-        <article class="presentacion"> <!--esto podría ser una sección y te deja liberada la posibilidad de utilizar article en reemplaz de algún div, y guarda con el indentado-->
+        <article class="presentacion">
             <div class="contenedor-presentacion">
                 <div class="columna-izquierda-presentacion">
                 <img src="img/foto-de-maia.jpg" alt="Foto de Maia Abril Carro" width="230px" height="310px">
@@ -40,7 +40,7 @@
 
         <section class="contenedor-sobremi">
             <article class="contenedor-izquierdo-sobre-mi">
-                <div class="#sobremi" id="sobre-mi"> <!--cuando se crea una class no se utiliza el numeral (#) sólo se hace en una referencia a un id en un href como en el nav-->
+                <div class="sobremi" id="sobre-mi"> 
                 <h5>SOBRE MÍ</h5>
                 <p>Actualmente me encuentro cursando la Licenciatura en Diseño y Comunicación Visual en la Universidad
                 Nacional de Lanús. A lo largo de mi formación académica he desarrollado proyectos vinculados
@@ -82,15 +82,24 @@
         </section>
     
     </main>
-    <footer id="footer">
-        <h6 class="gracias-por-ver">¡Gracias por ver!</h6>
-        <p>© 2026 Carro, Maia Abril — Todos los derechos reservados.</p>
-        <div id="redes-sociales">
+    <footer>
+        <section class="graciasporver">
+            <h6 class="gracias-por-ver">¡Gracias por ver!</h6>
+            <div class="logosredes">
             <a href="https://www.instagram.com/maaaaidg_/" target="_blank"><img src="img/logo-instagram.png" alt="Logo Instagram" width="40px" height="40px"></a>
             <a href="https://www.behance.net/maiacarro" target="_blank"><img src="img/logo-behance.png" alt="Logo Behance" width="40px" height="40px"></a>
-        </div>
-        <p>Cátedra Wischñevsky 2026</p>
-        <img src="img/universidad-nacional-de-lanus-logo.png" alt="Logo UNLa" width="40px" height="40px">
+            </div>
+        </section>
+        <section class="derechos">
+            <div> 
+            <p>© 2026 Carro, Maia Abril — Todos los derechos reservados.</p>
+            <p class="catedra">Cátedra Wischñevsky 2026</p>
+            </div>
+            <div class="logos">
+            <img src="img/compu-3-transparente.svg" alt="Logo Compu 3" width="40px" height="40px">
+            <a href="https://www.unla.edu.ar/" target="_blank"><img src="img/universidad-nacional-de-lanus-logo.png" alt="Logo UNLa" width="40px" height="40px"></a>
+            </div>
+        </section>
     </footer>
 </body>
 

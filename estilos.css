@@ -67,7 +67,6 @@ h6{
     font-size: 2.5rem;
     color: #ffffff;
     padding-bottom: 20px;
-    max-width: 50%;
 }
 
 a{
@@ -91,17 +90,23 @@ li{
 
 header{
     display: flex;
-    padding: 5px;
+    padding: 30px;
     background: #875d92;
 }
 
-.contenedor-encabezado{
+.botonera{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 120%; /*no es correcto este porcentaje, hasta 100 es válido*/
-    max-width: 1750 px; /*no tiene que haber un espacio entre el valor y la unidad de medida*/
-    padding: 10px;
+    width: 100%;
+    height: 65px;
+}
+
+.menu{
+    display: flex;
+    flex-direction: row;
+    margin-right: 10px;
+    list-style: none;
 }
 
 .presentacion{
@@ -121,7 +126,7 @@ header{
 }
 
 .columna-derecha-presentacion{
-    max-width: 40%; /*no está bueno usar porcentajes en máximas, esto está pensado para medidas específicas y fijas porque no es igual el 40% de tu pantalla, de la mía o la de un celular*/
+    max-width: 505px;
     padding: 35px 10px 10px 10px;
 }
 
@@ -129,14 +134,14 @@ header{
     display: flex;
     justify-content: center;
     flex-direction: row;
-    column-gap: 8%; /*porcentaje peligroso, mejor en px*/
+    column-gap: 55px;
     padding: 50px 50px 70px 50px;
 }
 
 .contenedor-izquierdo-sobre-mi{
     display: flex;
     flex-direction: column;
-    max-width: 44%; /*idem línea 124*/
+    max-width: 745px;
 }
 
 .formacion-academica{
@@ -163,11 +168,35 @@ header{
     margin-bottom: 15px;
 }
 
-#footer{
+.graciasporver{
     background-color: #4c0160;
     color: #fee9ff;
     display: flex;
-    padding: 40px 80px 30px 90px;
-    align-items: center;
-    gap:15rem; /*rem es una medida tipográfica y acá no estás seteando algo tipográfico, mejor px*/
+    padding: 20px 50px 20px 50px;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.derechos{
+    background-color: #fee9ff;
+    display: flex;
+    flex-direction: row;
+    padding: 40px 50px 20px 50px;
+    justify-content: space-between;
+}
+
+.catedra{
+    padding-top: 10px;
+}
+
+.logosredes{
+    display: flex;
+    flex-direction: row;
+    column-gap: 40px;
+}
+
+.logos{
+    display: flex;
+    flex-direction: row;
+    column-gap: 40px;
 }
