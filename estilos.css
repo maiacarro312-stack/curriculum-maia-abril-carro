@@ -13,12 +13,14 @@ header {
     background-color: var(--violeta-oscuro, #4D0261);
     border-radius: 60px;
     display: flex;
-    width: 1686px;
-    margin: 35px auto;
+    width: 1575px;
     height: 128px;
     padding-left: 55px;
     align-items: center;
-    gap: 271px;
+    gap: 160px;
+    margin-top: 35px;
+    margin-left: 90px;
+    margin-right: 117px;
 }
 
 nav {
@@ -73,7 +75,7 @@ a {
     border: 1px solid var(--violeta-clarito, #FEE9FF);
 }
 
-.contacto {
+.contacto-header {
     color: var(--violeta-oscuro, #4D0261);
     display: flex;
     width: 187px;
@@ -82,4 +84,59 @@ a {
     align-items: center;
     border-radius: 60px;
     background: var(--violeta-clarito, #FEE9FF);
+}
+
+body {
+    background-color: var(--violeta-clarito, #FEE9FF);
+}
+
+h1 {
+font-family: "Cal Sans";
+color: var(--violeta-oscuro, #4D0261);
+text-align: left;
+font-size: 8.125rem;
+font-style: normal;
+font-weight: 400;
+line-height: 135px;
+margin-left: 90px;
+margin-top: 335px;
+margin-bottom: 0px;
+
+}
+
+h2 {
+color: var(--violeta-oscuro, #4D0261);
+font-family: "Cal Sans";
+text-align: left;
+font-size: 3.4375rem;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+margin-left: 90px;
+margin-top: 0px;
+margin-bottom: 220px;
+}
+
+main {
+    display: flex;
+    width: 1207px;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.footer-container {
+    background: var(--colores-violeta-oscuro, #4D0261);
+    display: flex;
+    width: 1920px;
+    height: 299px;
+    padding: 52px 64px 76px 77px;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.footer-arriba {
+    display: flex;
+    width: 1150px;
+    justify-content: space-between;
+    align-items: center;
 }
