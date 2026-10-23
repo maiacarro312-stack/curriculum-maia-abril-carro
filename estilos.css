@@ -124,13 +124,10 @@ main {
     align-items: flex-start;
 }
 
-.footer-container {
+footer {
     background: var(--colores-violeta-oscuro, #4D0261);
     display: flex;
-    width: 1920px;
-    height: 299px;
-    padding: 52px 64px 76px 77px;
-    justify-content: flex-end;
+    padding: 52px 188px 76px 77px;
     align-items: center;
 }
 
@@ -139,4 +136,42 @@ main {
     width: 1150px;
     justify-content: space-between;
     align-items: center;
+    gap: 550px;
+}
+
+.footer-links {
+    display: flex;
+    align-items: center;
+    gap: 80px;
+}
+
+.footer-linea {
+    border: none;
+    height: 2px; 
+    background-color: var(--violeta-clarito, #FEE9FF);
+    width: 1655px;
+    margin: 20px 0; 
+}
+
+p {
+    color: #FFF;
+    text-align: center;
+    font-family: Roboto;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.footer-abajo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-self: stretch;
+}
+
+.logos-redes {
+    display: flex;
+    align-items: flex-end;
+    gap: 18px;
 }
