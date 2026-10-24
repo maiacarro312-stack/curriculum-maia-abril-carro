@@ -13,14 +13,15 @@ header {
     background-color: var(--violeta-oscuro, #4D0261);
     border-radius: 60px;
     display: flex;
-    width: 1575px;
     height: 128px;
-    padding-left: 55px;
+    padding: 0 55px;
     align-items: center;
-    gap: 160px;
-    margin-top: 35px;
-    margin-left: 90px;
-    margin-right: 117px;
+    justify-content: space-between;
+    margin: 35px 90px 0 90px;
+}
+
+.logo {
+    margin-right: 190px;
 }
 
 nav {
@@ -39,23 +40,26 @@ a {
     font-size: 1.3125rem;
     font-style: normal;
     font-weight: 600;
-    line-height: normal;
+}
+
+.nav-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-shrink: 0;
+
 }
 
 .logo-header {
     display: flex;
-    width: 945px;
-    justify-content: space-between;
     align-items: center;
-    flex-shrink: 0;
 }
 
 .nav-links {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 80px;
-    border-radius: 60px;
+    gap: 60px;
     background: var(--violeta-oscuro, #4D0261);
 }
 
@@ -88,6 +92,12 @@ a {
 
 body {
     background-color: var(--violeta-clarito, #FEE9FF);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 h1 {
@@ -122,34 +132,44 @@ main {
     width: 1207px;
     flex-direction: column;
     align-items: flex-start;
+    flex-grow: 1;
 }
 
 footer {
-    background: var(--colores-violeta-oscuro, #4D0261);
+    background: var(--violeta-oscuro, #4D0261);
     display: flex;
-    padding: 52px 188px 76px 77px;
-    align-items: center;
+    width: 100%;
+    padding: 52px 77px 76px 77px;
+    box-sizing: border-box;
+    justify-content: center;
+}
+
+.footer-container {
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .footer-arriba {
     display: flex;
-    width: 1150px;
+    width: 100%;
     justify-content: space-between;
     align-items: center;
-    gap: 550px;
+    flex-wrap: wrap;
+    gap: 30px;
 }
 
 .footer-links {
     display: flex;
     align-items: center;
     gap: 80px;
+    flex-wrap: wrap;
 }
 
 .footer-linea {
     border: none;
     height: 2px; 
     background-color: var(--violeta-clarito, #FEE9FF);
-    width: 1655px;
+    width: 100%;
     margin: 20px 0; 
 }
 
@@ -167,7 +187,8 @@ p {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    align-self: stretch;
+    flex-wrap: wrap;
+    width: 100%;
 }
 
 .logos-redes {
