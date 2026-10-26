@@ -20,6 +20,27 @@ header {
     margin: 35px 90px 0 90px;
 }
 
+body {
+    transition: background-color 0.4s ease;
+}
+
+h1, h2 {
+    transition: color 0.4s ease;
+}
+
+h1:hover {
+    color: var(--violeta-clarito, #FEE9FF);
+    text-transform: uppercase;            
+}
+
+h2:hover {
+    color: var(--violeta-clarito, #FEE9FF);         
+}
+
+body:has(h1:hover), body:has(h2:hover) {
+    background-color: var(--violeta-oscuro, #4D0261);
+}
+
 .logo {
     margin-right: 190px;
 }
@@ -63,6 +84,14 @@ a {
     background: var(--violeta-oscuro, #4D0261);
 }
 
+.nav-links a:hover {
+    color: var(--violeta-oscuro, #4D0261); 
+    background-color: var(--violeta-clarito, #FEE9FF); 
+    padding: 10px 20px;
+    border-radius: 30px;
+    transition: background-color 0.7s ease, color 0.7s ease;
+    }
+
 .nav-cv-contacto {
     display: flex;
     align-items: center;
@@ -79,6 +108,12 @@ a {
     border: 1px solid var(--violeta-clarito, #FEE9FF);
 }
 
+.cv:hover {
+    background-color: var(--violeta-clarito, #FEE9FF);
+    color: var(--violeta-oscuro, #4D0261);
+    transition: background-color 0.7s ease
+}
+
 .contacto-header {
     color: var(--violeta-oscuro, #4D0261);
     display: flex;
@@ -88,6 +123,15 @@ a {
     align-items: center;
     border-radius: 60px;
     background: var(--violeta-clarito, #FEE9FF);
+    border: 1px solid var(--violeta-clarito, #FEE9FF);
+    transition: background-color 0.7s ease
+}
+
+.contacto-header:hover {
+    background-color: var(--violeta-oscuro, #4D0261); 
+    color: var(--violeta-clarito, #FEE9FF);
+    border-color: var(--violeta-clarito, #FEE9FF);
+    transition: background-color 0.7s ease
 }
 
 body {
@@ -165,6 +209,27 @@ footer {
     flex-wrap: wrap;
 }
 
+.footer-links a {
+    position: relative;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-links a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -4px; 
+    left: 0;
+    background-color: var(--violeta-clarito, #FEE9FF); 
+    transition: width 0.3s ease;
+}
+
+.footer-links a:hover::after {
+    width: 100%;
+}
+
 .footer-linea {
     border: none;
     height: 2px; 
@@ -195,4 +260,16 @@ p {
     display: flex;
     align-items: flex-end;
     gap: 18px;
+}
+
+.logos-redes a {
+    display: inline-flex;
+    padding: 5px;
+    border-radius: 15px;
+    background-color: transparent;
+    transition: background-color 0.3s ease;
+}
+
+.logos-redes a:hover {
+    background-color: var(--violeta-intermedio, #875d92);
 }
