@@ -254,6 +254,25 @@ h4 {
     border-radius: 25px;
     border: 2px solid var(--colores-violeta-oscuro, #4D0261);
     margin: 0;
+    transition: background-color 0.4s ease, border-color 0.4s ease, transform 0.3s ease;
+}
+
+.economia-y-administracion:hover,
+.diseno-y-comunicacion:hover {
+    background-color: var(--violeta-intermedio, #875d92);
+    border-color: var(--violeta-intermedio, #875d92);
+}
+
+.economia-y-administracion:hover h5,
+.diseno-y-comunicacion:hover h5 {
+    color: #FFF;
+    transition: color 0.4s ease;
+}
+
+.economia-y-administracion:hover h6,
+.diseno-y-comunicacion:hover h6 {
+    color: #FFF;
+    transition: color 0.4s ease;
 }
 
 h5 {
@@ -299,7 +318,7 @@ p.centrado {
 
 .programas {
     display: flex;
-    width: 1193px;
+    width: 919px;
     flex-direction: column;
     align-items: center;
     gap: 90px;
@@ -307,9 +326,18 @@ p.centrado {
 
 .logos {
     display: flex;
-    align-items: flex-start;
-    gap: 133px;
-    align-self: stretch;
+    width: 917px;
+    justify-content: center;
+    align-items: center;
+    gap: 110px;
+}
+
+.logos img {
+    transition: transform 0.3s ease;
+}
+
+.logos img:hover {
+    transform: scale(1.15);
 }
 
 .servicios {
