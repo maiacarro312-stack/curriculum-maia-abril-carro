@@ -32,14 +32,14 @@
 
     <main>
 
-        <section class="yo">
+        <section class="yo"> <!--tenés muchos divs-->
             <div class="bloque-principal">
                 <!-- Contenedor foto principal -->
-                <div class="contenedor-foto">
-                    <img class="foto-normal" src="img/maia.png" alt="Maia violeta">
+                <div class="contenedor-foto"> <!--hay una etiqueta correspondiente para fotos con descripciones-->
+                    <img class="foto-normal" src="img/maia.png" alt="Maia violeta"> <!--el tamaño renderizado y el intrínseco son distintos-->
                     <img class="foto-hover" src="img/maia_color_2.png" alt="Maia color">
                 </div>
-                <div class="texto-a">
+                <div class="texto-a"> <!--hay una etiqueta correspondiente para textos largos-->
                     <h2>Me llamo Maia</h2>
                     <p>Actualmente me encuentro cursando la Licenciatura en Diseño y Comunicación Visual en la Universidad Nacional de Lanús (UNLa). Me apasiona el diseño de identidades visuales y el desarrollo de proyectos editoriales y gráficos. Además, cuento con un emprendimiento personal de papelería, un espacio donde aplico mis conocimientos en la creación y producción de productos, potenciando habilidades clave como la organización, la planificación y la responsabilidad en cada etapa de trabajo.</p>
                 </div>
@@ -57,7 +57,7 @@
 
         <section class="formacion-academica">
             <h4>Formación académica</h4>
-            <div class="formacion">
+            <div class="formacion"><!--esto es una cantidad de cosas que hiciste de forma cronológica y que se podría reestructurar con otra tag-->
                 <div class="economia-y-administracion">
                     <div class="h5-6">
                         <h5>Bachiller de Economía y Administración</h5>
@@ -77,7 +77,7 @@
 
         <section class="programas">
             <h4>Programas que uso</h4>
-            <div class="logos">
+            <div class="logos"> <!--esto también es un conjunto de cosas que utilizás aunque no de forma cronológica-->
                 <img src="img/ps.png" alt="Adobe Photoshop">
                 <img src="img/ai.png" alt="Adobe Illustrator">
                 <img src="img/id.png" alt="Adobe InDesign">
@@ -87,9 +87,9 @@
         </section>
 
         <section class="servicios">
-            <div class="linea"></div>
-            <div class="servicios-3">
-                <div class="diseño-grafico">
+            <div class="linea"></div> <!--es coherente que un div sea un claro divisor, pero podrías solucionar esto con un border desde css-->
+            <div class="servicios-3"> <!--otro conjunto de cosas-->
+                <div class="diseño-grafico"> 
                     <h4>Diseño Gráfico</h4>
                     <p class="centrado">Brindo soluciones integrales de diseño gráfico para marcas, empresas y emprendedores. Abarco desde la creación de identidades visuales y logotipos hasta material de marketing (como folletos y tarjetas de presentación), piezas para redes sociales y diseño web.</p>
                 </div>
