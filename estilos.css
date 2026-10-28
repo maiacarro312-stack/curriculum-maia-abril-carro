@@ -13,7 +13,7 @@ header {
     background-color: var(--violeta-oscuro, #4D0261);
     border-radius: 60px;
     display: flex;
-    height: 128px;
+    height: 128px; /*tamaños fijos no pero con padding sí*/
     padding: 0 55px;
     align-items: center;
     justify-content: space-between;
@@ -148,17 +148,17 @@ h1 {
 font-family: "Cal Sans";
 color: var(--violeta-oscuro, #4D0261);
 text-align: left;
-font-size: 8.125rem;
+font-size: 8.125rem; /*numeros raros no. hay que filtrar las cosas que vengan desde figma a numeros redondos*/
 font-style: normal;
 font-weight: 400;
-line-height: 135px;
-margin-left: 90px;
-margin-top: 335px;
-margin-bottom: 0px;
+line-height: 135px; /*este es un tamaño tipográfico y quedaría mejor tratado con la unidad de medida correspondiente a tipos*/
+margin-left: 90px; /*este margen está ahí nomás de ser peligroso pero te va dificultar la vida al pasar a mobile, te conviene que los margenes estén en el padre de forma gral así también aplica al subtítlo y ahorrás líneas y que sea mucho más chiquito, a lo sumo que tenga otra regla más*/
+margin-top: 335px; /*hablamos en el tp1 los margins y paddings mayores a 80px (o si es muy necesario hasta 100px) están prohibidos en el 99% de los casos y en este caso aplica. hay otras formas de centrar en una caja*/
+margin-bottom: 0px; /*no te conviene aplicar esto en el selector universal? lo veo repetido muchas veces y con eso sólo seteás los lugares donde no querés que sea cero, tanto margin como padding*/
 
 }
 
-h2 {
+h2 { /*mismísimas correcciones que el h1, también podrías sintetizar las propiedades que se repiten en una sola*/
 color: var(--violeta-oscuro, #4D0261);
 font-family: "Cal Sans";
 text-align: left;
@@ -173,7 +173,7 @@ margin-bottom: 220px;
 
 main {
     display: flex;
-    width: 1207px;
+    width: 1207px; /*tamaños fijos nooo*/
     flex-direction: column;
     align-items: flex-start;
     flex-grow: 1;
@@ -183,7 +183,7 @@ footer {
     background: var(--violeta-oscuro, #4D0261);
     display: flex;
     width: 100%;
-    padding: 52px 77px 76px 77px;
+    padding: 52px 77px 76px 77px; /*en lugar de usar paddings enormes usá un max-width en el padre así no te complica el mobile, además ya estás centrando todocon flex*/
     box-sizing: border-box;
     justify-content: center;
 }
@@ -211,7 +211,7 @@ footer {
 
 .footer-links a {
     position: relative;
-    text-decoration: none;
+    text-decoration: none; /*no repitas*/
     transition: color 0.3s ease;
 }
 
@@ -248,7 +248,7 @@ p {
     line-height: normal;
 }
 
-.footer-abajo {
+.footer-abajo { /*si footer-arriba y footer abajo son iguales se pueden sintetizar*/
     display: flex;
     justify-content: space-between;
     align-items: center;
