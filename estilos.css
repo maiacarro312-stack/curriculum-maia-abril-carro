@@ -9,36 +9,114 @@
     --violeta-clarito: #f2e6f0;
 }
 
+body {
+    background-color: var(--violeta-clarito, #FEE9FF);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    min-height: 115vh;
+    cursor: url(img/cursor.svg), auto;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    margin: 0px;
+    flex: 1;
+}
+
+/*estilos*/
+
+h1 {
+    font-family: "Cal Sans";
+    color: var(--violeta-oscuro, #4D0261);
+    text-align: left;
+    font-size: 8rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 8rem;
+    margin: 0px
+}
+
+h2 {
+    color: var(--violeta-oscuro, #4D0261);
+    font-family: "Cal Sans";
+    text-align: left;
+    font-size: 3rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin: 0px
+}
+
+h3 {
+    color: var(--violeta-oscuro, #4D0261);
+    text-align: center;
+    font-family: "Cal Sans";
+    font-size: 37px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    align-self: stretch;
+    margin: 0;
+}
+
+h4 {
+    color: var(--colores-violeta-oscuro, #4D0261);
+    text-align: center;
+    font-family: Roboto;
+    font-size: 19px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 38px;
+    margin: 0;
+}
+
+h5 {
+    color: #000;
+    text-align: center;
+    font-family: Roboto;
+    font-size: 19px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 38px;
+    margin: 0;
+}
+
+p {
+    font-family: Roboto;
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 27px;
+    margin: 0;
+}
+
+/* header */
+
 header {
     background-color: var(--violeta-oscuro, #4D0261);
     border-radius: 60px;
     display: flex;
-    height: 128px; /*tamaños fijos no pero con padding sí*/
-    padding: 0 55px;
+    padding: 15px 55px;
     align-items: center;
     justify-content: space-between;
-    margin: 35px 90px 0 90px;
+    margin: 35px 140px 60px 140px;
 }
 
-body {
-    transition: background-color 0.4s ease;
-}
-
-h1, h2 {
+.h1.h2 {
     transition: color 0.4s ease;
 }
 
-h1:hover {
+.h1:hover {
     color: var(--violeta-clarito, #FEE9FF);
-    text-transform: uppercase;            
+    text-transform: uppercase;
 }
 
-h2:hover {
-    color: var(--violeta-clarito, #FEE9FF);         
-}
-
-body:has(h1:hover), body:has(h2:hover) {
-    background-color: var(--violeta-oscuro, #4D0261);
+.h2:hover {
+    color: var(--violeta-clarito, #FEE9FF);
 }
 
 .logo {
@@ -84,13 +162,25 @@ a {
     background: var(--violeta-oscuro, #4D0261);
 }
 
-.nav-links a:hover {
-    color: var(--violeta-oscuro, #4D0261); 
-    background-color: var(--violeta-clarito, #FEE9FF); 
-    padding: 10px 20px;
-    border-radius: 30px;
-    transition: background-color 0.7s ease, color 0.7s ease;
-    }
+.nav-links a {
+    position: relative;
+    padding: 5px 0;
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -2px;
+    left: 0;
+    background-color: var(--violeta-clarito, #FEE9FF);
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
 
 .nav-cv-contacto {
     display: flex;
@@ -100,8 +190,8 @@ a {
 
 .cv {
     display: flex;
-    width: 130px;
-    height: 75px;
+    width: 115px;
+    height: 65px;
     justify-content: center;
     align-items: center;
     border-radius: 60px;
@@ -118,7 +208,7 @@ a {
     color: var(--violeta-oscuro, #4D0261);
     display: flex;
     width: 187px;
-    height: 75px;
+    height: 65px;
     justify-content: center;
     align-items: center;
     border-radius: 60px;
@@ -128,148 +218,273 @@ a {
 }
 
 .contacto-header:hover {
-    background-color: var(--violeta-oscuro, #4D0261); 
+    background-color: var(--violeta-oscuro, #4D0261);
     color: var(--violeta-clarito, #FEE9FF);
     border-color: var(--violeta-clarito, #FEE9FF);
     transition: background-color 0.7s ease
 }
 
-body {
-    background-color: var(--violeta-clarito, #FEE9FF);
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+
+#index {
+    transition: background-color 0.4s ease;
 }
 
-h1 {
-font-family: "Cal Sans";
-color: var(--violeta-oscuro, #4D0261);
-text-align: left;
-font-size: 8.125rem; /*numeros raros no. hay que filtrar las cosas que vengan desde figma a numeros redondos*/
-font-style: normal;
-font-weight: 400;
-line-height: 135px; /*este es un tamaño tipográfico y quedaría mejor tratado con la unidad de medida correspondiente a tipos*/
-margin-left: 90px; /*este margen está ahí nomás de ser peligroso pero te va dificultar la vida al pasar a mobile, te conviene que los margenes estén en el padre de forma gral así también aplica al subtítlo y ahorrás líneas y que sea mucho más chiquito, a lo sumo que tenga otra regla más*/
-margin-top: 335px; /*hablamos en el tp1 los margins y paddings mayores a 80px (o si es muy necesario hasta 100px) están prohibidos en el 99% de los casos y en este caso aplica. hay otras formas de centrar en una caja*/
-margin-bottom: 0px; /*no te conviene aplicar esto en el selector universal? lo veo repetido muchas veces y con eso sólo seteás los lugares donde no querés que sea cero, tanto margin como padding*/
-
+#index:has(h1:hover),
+#index:has(h2:hover) {
+    background-color: var(--violeta-oscuro, #4D0261);
 }
 
-h2 { /*mismísimas correcciones que el h1, también podrías sintetizar las propiedades que se repiten en una sola*/
-color: var(--violeta-oscuro, #4D0261);
-font-family: "Cal Sans";
-text-align: left;
-font-size: 3.4375rem;
-font-style: normal;
-font-weight: 400;
-line-height: normal;
-margin-left: 90px;
-margin-top: 0px;
-margin-bottom: 220px;
-}
-
-main {
-    display: flex;
-    width: 1207px; /*tamaños fijos nooo*/
-    flex-direction: column;
-    align-items: flex-start;
-    flex-grow: 1;
-}
+/*footer*/
 
 footer {
-    background: var(--violeta-oscuro, #4D0261);
+    background-color: var(--violeta-oscuro);
     display: flex;
-    width: 100%;
-    padding: 52px 77px 76px 77px; /*en lugar de usar paddings enormes usá un max-width en el padre así no te complica el mobile, además ya estás centrando todocon flex*/
-    box-sizing: border-box;
-    justify-content: center;
-}
-
-.footer-container {
-    width: 100%;
-    box-sizing: border-box;
-}
-
-.footer-arriba {
-    display: flex;
-    width: 100%;
+    flex-direction: row;
+    flex-wrap: nowrap;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;
-    gap: 30px;
+    width: auto;
+    height: 16vh;
+    padding: 0px 180px;
 }
 
-.footer-links {
+.footer {
+color: #FFF;
+}
+
+/*index*/
+
+#caja-index {
+    position: relative;
+    left: 140px;
+    top: 280px;
+}
+
+/*sobre mi*/
+
+#sobremi {
+    align-items: center;
+    padding: 90px 0px 90px 0px;
+
+}
+
+.sobremi {
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+    flex-direction: column;
+    align-items: center;
+    gap: 150px;
+    box-sizing: border-box;
+    padding: 0px 90px
+}
+
+.bloque-principal {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    gap: 60px;
+}
+
+.texto-a {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+    flex: 1;
+}
+
+/* Estilos para el cambio de foto al hacer hover */
+.contenedor-foto {
+    position: relative;
+    width: 350px;
+    height: auto;
+    border-radius: 30px;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.contenedor-foto img {
+    width: 100%;
+    height: auto;
+    border-radius: 30px;
+    display: block;
+    transition: opacity 0.5s ease;
+}
+
+.contenedor-foto .foto-hover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+
+.contenedor-foto:hover .foto-hover {
+    opacity: 1;
+}
+
+.formacion-academica {
+    display: flex;
+    width: 100%;
+    max-width: 1060px;
+    flex-direction: column;
+    align-items: center;
+    gap: 90px;
+    padding: 60px 0px 80px 0px;
+}
+
+.formacion {
+    display: flex;
+    align-items: center;
+    gap: 140px;
+    align-self: stretch;
+    margin: 0;
+    padding: 0;
+}
+
+.economia-y-administracion,
+.diseno-y-comunicacion {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 25px;
+    border: 2px solid var(--colores-violeta-oscuro, #4D0261);
+    margin: 0px;
+    transition: background-color 0.4s ease, border-color 0.4s ease, transform 0.3s ease;
+}
+
+.economia-y-administracion:hover,
+.diseno-y-comunicacion:hover {
+    background-color: var(--violeta-intermedio, #875d92);
+    border-color: var(--violeta-intermedio, #875d92);
+}
+
+.economia-y-administracion:hover h4,
+.diseno-y-comunicacion:hover h4 {
+    color: #FFF;
+    transition: color 0.4s ease;
+}
+
+.economia-y-administracion:hover h5,
+.diseno-y-comunicacion:hover h5 {
+    color: #FFF;
+    transition: color 0.4s ease;
+}
+
+.h4-5,
+.h4-5-2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin: 20px;
+}
+
+p.centrado {
+    text-align: center;
+}
+
+.programas {
+    display: flex;
+    width: 100%;
+    max-width: 1060px;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+    padding-top: 60px;
+    margin: 0;
+    box-sizing: border-box;
+}
+.logos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 110px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.logos img {
+    transition: transform 0.3s ease;
+}
+
+.logos img:hover {
+    transform: scale(1.15);
+}
+
+.servicios {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 80px;
+    width: 100%;
+    max-width: 1200px;
+    margin-top: 100px;
+    padding-top: 90px;
+    border-top: 3px solid var(--violeta-oscuro, #4D0261);
+    box-sizing: border-box;
+}
+
+.linea {
+    background-color: var(--violeta-oscuro, #4D0261);
+    width: 1193px;
+    height: 3px;
+    margin-top: 184px;
+    margin-bottom: 102px;
+    border-radius: 2px;
+}
+
+.servicios-3 {
     display: flex;
     align-items: center;
     gap: 80px;
-    flex-wrap: wrap;
+    align-self: center;
+    justify-content: center;
+    list-style: none;
+    padding: 0px 0px 40px 0px;
+    margin: 0;
 }
 
-.footer-links a {
-    position: relative;
-    text-decoration: none; /*no repitas*/
-    transition: color 0.3s ease;
-}
-
-.footer-links a::after {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 2px;
-    bottom: -4px; 
-    left: 0;
-    background-color: var(--violeta-clarito, #FEE9FF); 
-    transition: width 0.3s ease;
-}
-
-.footer-links a:hover::after {
-    width: 100%;
-}
-
-.footer-linea {
-    border: none;
-    height: 2px; 
-    background-color: var(--violeta-clarito, #FEE9FF);
-    width: 100%;
-    margin: 20px 0; 
-}
-
-p {
-    color: #FFF;
-    text-align: center;
-    font-family: Roboto;
-    font-size: 15px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-}
-
-.footer-abajo { /*si footer-arriba y footer abajo son iguales se pueden sintetizar*/
+.diseño-grafico {
     display: flex;
-    justify-content: space-between;
+    width: 376px;
+    flex-direction: column;
     align-items: center;
-    flex-wrap: wrap;
-    width: 100%;
+    gap: 22px;
 }
 
-.logos-redes {
+.papeleria {
     display: flex;
-    align-items: flex-end;
-    gap: 18px;
+    width: 357px;
+    flex-direction: column;
+    align-items: center;
+    gap: 22px;
 }
 
-.logos-redes a {
-    display: inline-flex;
-    padding: 5px;
-    border-radius: 15px;
-    background-color: transparent;
-    transition: background-color 0.3s ease;
+.diseño-editorial {
+    display: flex;
+    width: 344px;
+    height: 231px;
+    flex-direction: column;
+    align-items: center;
+    gap: 22px;
 }
 
-.logos-redes a:hover {
-    background-color: var(--violeta-intermedio, #875d92);
+.diseño-editorial h3 {
+    padding: 0;
+}
+
+.diseño-grafico h3 {
+    padding: 0;
+}
+
+.papeleria h3 {
+    padding: 0;
 }

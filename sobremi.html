@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <title>Maia Abril Carro - Portfolio</title>
     <link rel="icon" href="img/logo-icon.svg" type="image/logo-icon" sizes="16x16" alt="favicon-cvmaia">
-    <link rel="stylesheet" href="sobremi.css">
+    <link rel="stylesheet" href="estilos.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Cal+Sans&family=Roboto:ital,wdth,wght@0,75..100,100..900;1,75..100,100..900&display=swap');
     </style>
@@ -15,7 +15,7 @@
     <header>
         <div class="logo-header">
             <a href="index.html">
-                <img class="logo" src="img/logo-clarito.svg" alt="Logo" width="82px" height="65px">
+                <img class="logo" src="img/logo-clarito.svg" alt="Logo" width="75px" height="65px">
             </a>
         </div>
 
@@ -30,23 +30,32 @@
         </div>
     </header>
 
-    <main>
-
-        <section class="yo"> <!--tenés muchos divs-->
+    <main id="sobremi">
+        <section class="sobremi">
             <div class="bloque-principal">
                 <!-- Contenedor foto principal -->
-                <div class="contenedor-foto"> <!--hay una etiqueta correspondiente para fotos con descripciones-->
-                    <img class="foto-normal" src="img/maia.png" alt="Maia violeta"> <!--el tamaño renderizado y el intrínseco son distintos-->
+                <div class="contenedor-foto">
+                    <img class="foto-normal" src="img/maia.png" alt="Maia violeta">
                     <img class="foto-hover" src="img/maia_color_2.png" alt="Maia color">
                 </div>
-                <div class="texto-a"> <!--hay una etiqueta correspondiente para textos largos-->
+                <article class="texto-a">
                     <h2>Me llamo Maia</h2>
-                    <p>Actualmente me encuentro cursando la Licenciatura en Diseño y Comunicación Visual en la Universidad Nacional de Lanús (UNLa). Me apasiona el diseño de identidades visuales y el desarrollo de proyectos editoriales y gráficos. Además, cuento con un emprendimiento personal de papelería, un espacio donde aplico mis conocimientos en la creación y producción de productos, potenciando habilidades clave como la organización, la planificación y la responsabilidad en cada etapa de trabajo.</p>
-                </div>
+                    <p>Actualmente me encuentro cursando la Licenciatura en Diseño y Comunicación Visual en la
+                        Universidad Nacional de Lanús (UNLa). Me apasiona el diseño de identidades visuales y el
+                        desarrollo de proyectos editoriales y gráficos. Además, cuento con un emprendimiento
+                        personal de
+                        papelería, un espacio donde aplico mis conocimientos en la creación y producción de
+                        productos,
+                        potenciando habilidades clave como la organización, la planificación y la responsabilidad en
+                        cada etapa de trabajo.</p>
+                </article>
             </div>
 
-            <div class="maia-peque">
-                <p>Desde chiquita que siempre me gustó el arte, la música y era muy apasionada por crear. Me gustaba dibujar miles de cuadernos (y paredes), mirar Art Attack y experimentar con todo. Al final, toda esa pasión de chica terminó abriendo el camino para que hoy la creatividad sea mi profesión.</p>
+            <div class="bloque-principal">
+                <p>Desde chiquita que siempre me gustó el arte, la música y era muy apasionada por crear. Me gustaba
+                    dibujar miles de cuadernos (y paredes), mirar Art Attack y experimentar con todo. Al final, toda
+                    esa
+                    pasión de chica terminó abriendo el camino para que hoy la creatividad sea mi profesión.</p>
                 <!-- Contenedor foto chica -->
                 <div class="contenedor-foto">
                     <img class="foto-normal" src="img/maia_chiquita.png" alt="Maia chiquita violeta">
@@ -56,80 +65,71 @@
         </section>
 
         <section class="formacion-academica">
-            <h4>Formación académica</h4>
-            <div class="formacion"><!--esto es una cantidad de cosas que hiciste de forma cronológica y que se podría reestructurar con otra tag-->
-                <div class="economia-y-administracion">
-                    <div class="h5-6">
-                        <h5>Bachiller de Economía y Administración</h5>
-                        <h6>Nuevo Colegio Glew</h6>
-                        <h6>2018 - 2023</h6>
+            <h3>Formación académica</h3>
+            <ul class="formacion">
+                <li class="economia-y-administracion">
+                    <div class="h4-5">
+                        <h4>Bachiller de Economía y Administración</h4>
+                        <h5>Nuevo Colegio Glew</h5>
+                        <h5>2018 - 2023</h5>
                     </div>
-                </div>
-                <div class="diseno-y-comunicacion">
-                    <div class="h5-6-2">
-                        <h5>Licenciatura en Diseño y Comunicación Visual</h5>
-                        <h6>Universidad Nacional de Lanús</h6>
-                        <h6>2024 - En curso</h6>
+                </li>
+                <li class="diseno-y-comunicacion">
+                    <div class="h4-5-2">
+                        <h4>Licenciatura en Diseño y Comunicación Visual</h4>
+                        <h5>Universidad Nacional de Lanús</h5>
+                        <h5>2024 - En curso</h5>
                     </div>
-                </div>
-            </div>
+                </li>
+            </ul>
         </section>
 
         <section class="programas">
-            <h4>Programas que uso</h4>
-            <div class="logos"> <!--esto también es un conjunto de cosas que utilizás aunque no de forma cronológica-->
-                <img src="img/ps.png" alt="Adobe Photoshop">
-                <img src="img/ai.png" alt="Adobe Illustrator">
-                <img src="img/id.png" alt="Adobe InDesign">
-                <img src="img/figma.png" alt="Figma">
-                <img src="img/visual.png" alt="Visual Studio Code">
-            </div>
+            <h3>Programas que uso</h3>
+            <ul class="logos">
+                <li><img src="img/ps.png" alt="Adobe Photoshop"></li>
+                <li><img src="img/ai.png" alt="Adobe Illustrator"></li>
+                <li><img src="img/id.png" alt="Adobe InDesign"></li>
+                <li><img src="img/figma.png" alt="Figma"></li>
+                <li><img src="img/visual.png" alt="Visual Studio Code"></li>
+            </ul>
         </section>
 
         <section class="servicios">
-            <div class="linea"></div> <!--es coherente que un div sea un claro divisor, pero podrías solucionar esto con un border desde css-->
-            <div class="servicios-3"> <!--otro conjunto de cosas-->
-                <div class="diseño-grafico"> 
-                    <h4>Diseño Gráfico</h4>
-                    <p class="centrado">Brindo soluciones integrales de diseño gráfico para marcas, empresas y emprendedores. Abarco desde la creación de identidades visuales y logotipos hasta material de marketing (como folletos y tarjetas de presentación), piezas para redes sociales y diseño web.</p>
-                </div>
-                <div class="papeleria">
-                    <h4>Papelería</h4>
-                    <p class="centrado">Diseño y producción de papelería creativa y personalizada. Llevo adelante mi propio emprendimiento en este rubro,  donde hago agendas, cuadernos, stickers y papelería corporativa. Combino la sensibilidad estética con la funcionalidad para crear piezas únicas..</p>
-                </div>
-                <div class="diseño-editorial">
-                    <h4>Diseño Editorial</h4>
-                    <p class="centrado">Maquetación y estructuración de proyectos editoriales. Me apasiona ordenar el contenido y darle ritmo visual a publicaciones impresas o digitales. Cuento con experiencia en el diseño y armado de libros, revistas, catálogos y folletería.</p>
-                </div>
-            </div>
+            <ul class="servicios-3">
+                <li class="diseño-grafico">
+                    <h3>Diseño Gráfico</h3>
+                    <p class="centrado">Brindo soluciones integrales de diseño gráfico para marcas, empresas y
+                        emprendedores. Abarco desde la creación de identidades visuales y logotipos hasta material
+                        de
+                        marketing (como folletos y tarjetas de presentación), piezas para redes sociales y diseño
+                        web.
+                    </p>
+                </li>
+                <li class="papeleria">
+                    <h3>Papelería</h3>
+                    <p class="centrado">Diseño y producción de papelería creativa y personalizada. Llevo adelante mi
+                        propio emprendimiento en este rubro, donde hago agendas, cuadernos, stickers y papelería
+                        corporativa. Combino la sensibilidad estética con la funcionalidad para crear piezas
+                        únicas.
+                    </p>
+                </li>
+                <li class="diseño-editorial">
+                    <h3>Diseño Editorial</h3>
+                    <p class="centrado">Maquetación y estructuración de proyectos editoriales. Me apasiona ordenar
+                        el
+                        contenido y darle ritmo visual a publicaciones impresas o digitales. Cuento con experiencia
+                        en
+                        el diseño y armado de libros, revistas, catálogos y folletería.</p>
+                </li>
+            </ul>
         </section>
     </main>
 
-        <footer>
-        <div class="footer-container">
-            <div class="footer-arriba">
-                <img src="img/logo-footer.png" alt="footer_logo">
-                <div class="footer-links">
-                    <a href="#sobremi" target="_self">Sobre mi</a>
-                    <a href="#proyectos" target="_self">Proyectos</a>
-                    <a class="contacto" href="#contacto" target="_self">Contacto</a>
-                </div>
-            </div>
-
-            <!-- Esta es la línea divisoria -->
-            <hr class="footer-linea">
-
-            <div class="footer-abajo">
-                <p class="footer">Copyright © 2026 Carro Maia - All rights reserved</p>
-                <div class="logos-redes">
-                    <a href="https://www.instagram.com/maaaaidg_/" target="_blank">
-                        <img src="img/instagram-portfolio.png" alt="Logo de instagram">
-                    </a>
-                    <a href="https://www.behance.net/maiacarro" target="_blank">
-                        <img src="img/behance-portfolio.png" alt="Logo de behance" width="44px" height="px">
-                    </a>
-                </div>
-            </div>
-        </div>
+    <footer>
+        <a href="https://www.instagram.com/wis.unla/" target="_blank">
+            <img src="img/compu3.png" alt="logo compu 3" widht="79px" height="45px">
+        </a>
+        <p class="footer">Copyright © 2026 Carro Maia - All rights reserved</p>
     </footer>
 </body>
