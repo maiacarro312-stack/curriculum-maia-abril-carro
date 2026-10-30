@@ -244,6 +244,7 @@ a {
     background-color: var(--violeta-oscuro, #4D0261);
 }
 
+
 /*footer*/
 
 footer {
@@ -931,4 +932,220 @@ p.centrado {
 .volver-arriba img {
     height: 25px;
     width: auto;
+}
+
+.menu-checkbox,
+.menu-btn,
+.close-btn,
+.nav-mobile {
+    display: none;
+}
+
+@media screen and (max-width: 500px) {
+
+    body {
+        box-sizing: border-box;
+    }
+
+    header {
+        margin: 15px auto;
+        width: 100%;
+        border-radius: 40px;
+        box-sizing: border-box;
+    }
+
+    .logo {
+        margin-right: 0;
+        width: 50px;
+        height: auto;
+    }
+
+    .nav-links,
+    .nav-cv-contacto {
+        display: none;
+    }
+
+    .menu-btn {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        cursor: pointer;
+        z-index: 1001;
+    }
+
+    .menu-btn .bar {
+        width: 26px;
+        height: 3px;
+        background-color: var(--violeta-clarito);
+        border-radius: 2px;
+        transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+
+    .nav-mobile {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 195px;
+        height: 360px;
+        background-color: var(--violeta-oscuro);
+        border-radius: 20px 0 0 20px;
+        padding: 95px 45px 50px 55px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+        transition: right 0.3s ease-in-out;
+        box-sizing: border-box;
+        z-index: 1000;
+        box-shadow: -5px 0 25px rgba(0, 0, 0, 0.3);
+    }
+
+    /*el menú se desliza a la pantalla */
+    #menu-toggle:checked~.nav-mobile {
+        right: 0;
+    }
+
+    /*x al abrir*/
+    #menu-toggle:checked~.menu-btn .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    #menu-toggle:checked~.menu-btn .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    #menu-toggle:checked~.menu-btn .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .nav-mobile a {
+        color: var(--violeta-clarito);
+        text-decoration: none;
+        font-size: 20px;
+        font-family: "Cal Sans", sans-serif;
+        font-weight: 400;
+    }
+
+    .sobremi {
+        padding: 0 10px;
+        gap: 60px;
+    }
+
+    .bloque-principal {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .texto-a {
+        align-items: center;
+    }
+
+    .texto-a h2 {
+        text-align: center;
+        font-size: 2.2rem;
+    }
+
+    .contenedor-foto {
+        width: 100%;
+        max-width: 280px;
+    }
+
+    .formacion-academica {
+        padding: 40px 10px;
+        gap: 40px;
+    }
+
+    .formacion {
+        flex-direction: column;
+        gap: 20px;
+        width: 100%;
+    }
+
+    .economia-y-administracion,
+    .diseño-y-comunicacion {
+        width: 100%;
+    }
+
+    .programas {
+        padding-top: 20px;
+        gap: 30px;
+    }
+
+    .logos {
+        gap: 30px;
+    }
+
+    .logos img {
+        width: 45px;
+        height: auto;
+    }
+
+    .servicios {
+        margin-top: 50px;
+        padding-top: 50px;
+        gap: 40px;
+    }
+
+    .servicios-3 {
+        flex-direction: column;
+        gap: 30px;
+        padding: 0;
+        width: 100%;
+    }
+
+    .diseño-grafico,
+    .papeleria,
+    .diseño-editorial {
+        width: 100%;
+        height: auto;
+        padding: 0 15px;
+        box-sizing: border-box;
+    }
+
+    footer {
+        padding: 20px;
+        flex-direction: column;
+        gap: 15px;
+        height: auto;
+        text-align: center;
+    }
+
+    .redes-fijo {
+        top: auto;
+        bottom: 20px;
+        left: 0;
+        padding: 10px 12px;
+    }
+
+    .redes-fijo img {
+        width: 20px;
+    }
+
+    .volver-arriba {
+        bottom: 20px;
+        right: 0;
+        padding: 10px 12px;
+    }
+
+    .redes-fijo,
+    .volver-arriba {
+        display: none !important;
+    }
+
+    header {
+        margin: 15px 20px;
+        width: auto;
+    }
+
+    .sobremi, 
+    .formacion-academica, 
+    .programas, 
+    .servicios, 
+    .proyectos, 
+    .contacto {
+        padding-left: 20px;
+        padding-right: 20px;
+        box-sizing: border-box;
+    }
 }
