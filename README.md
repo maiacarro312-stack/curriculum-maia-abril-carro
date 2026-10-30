@@ -1,15 +1,9 @@
-**TP 1 CURRÍCULUM**
+**TP3 PORTFOLIO**
 
-Este proyecto consiste en la realización de un currículum vitae en formato web para la materia Computación 3.
-
-El editor de código utilizado es Visual Studio Code, donde el objetivo fue principalmente crear un código en HTML5 y aplicar propiedades de CSS y Flexbox al mismo, con el fin de organizar y dar estilo a los diferentes elementos que componen la página.
+Este proyecto consiste en convertir el currículum vitae en formato web en un portfolio para la materia Computación 3, demostrando los conocimientos adquiridos en Figma y aplicando un diseño responsive.
 
 **Datos del proyecto**
 
 · Tamaño de pantalla: 1920 × 1080 px
-
 · Editor de código: Visual Studio Code
-
-· Lenguajes utilizados: HTML5 y CSS
-
-· Recursos utilizados: Flexbox
+· Link de Figma: https://www.figma.com/design/RV2QEyS8M5fFGAWzHhQmdZ/Portfolio---Carro-Maia?node-id=0-1&t=OL5u7VYLuNnCeAVf-1
