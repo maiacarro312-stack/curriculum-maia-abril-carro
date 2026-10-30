@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Maia Abril Carro - Portfolio</title>
+    <link rel="icon" href="img/logo-icon.svg" type="image/logo-icon" sizes="16x16" alt="favicon-cvmaia">
+    <link rel="stylesheet" href="estilos.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cal+Sans&family=Roboto:ital,wdth,wght@0,75..100,100..900;1,75..100,100..900&display=swap');
+    </style>
+</head>
+
+<body>
+    <header id="header-top">
+        <div class="logo-header">
+            <a href="index.html">
+                <img class="logo" src="img/logo-clarito.svg" alt="Logo" width="75px" height="65px">
+            </a>
+        </div>
+
+        <nav class="nav-links">
+            <a href="sobremi.html" target="_self">Sobre mi</a>
+            <a href="proyectos.html" target="_self">Proyectos</a>
+        </nav>
+
+        <div class="nav-cv-contacto">
+            <a class="cv" href="img/cv_carro_maia.pdf" download="CV-Maia-Carro.pdf" target="_blank">CV</a>
+            <a class="contacto-header" href="contacto.html" target="_self">¿Hablamos?</a>
+        </div>
+    </header>
+
+    <main id="main-contacto">
+        <section class="contacto">
+            <div class="izq">
+                <div>
+                    <h2>Trabajemos juntos en tu próximo proyecto</h2>
+                </div>
+            </div>
+            <form method="post" action="" target="_blank" enctype="text/plain" class="formulario">
+                <div class="datos-persona">
+                    <div class="nombre">
+                        <label for="nombre">
+                            <h6>Nombre</h6>
+                        </label>
+                        <input type="text" name="Nombre" id="Nombre" maxlength="30" required>
+                    </div>
+                    <div class="mail">
+                        <label for="mail">
+                            <h6>Mail</h6>
+                        </label>
+                        <input type="email" name="mail" id="Mail" required>
+                    </div>
+                </div>
+                <div class="que-buscas">
+                    <h6>¿Qué buscas?</h6>
+                    <div class="selecciona">
+                        <label class="checkbox">
+                            <input type="checkbox" name="interes[]" value="Editorial"><span>Editorial</span>
+                        </label>
+                        <label class="checkbox">
+                            <input type="checkbox" name="interes[]" value="Branding"><span>Branding</span>
+                        </label>
+                        <label class="checkbox">
+                            <input type="checkbox" name="interes[]" value="Papeleria"><span>Papelería</span>
+                        </label>
+                        <label class="checkbox">
+                            <input type="checkbox" name="interes[]" value="Otro"><span>Otro</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="mensaje">
+                    <label for="mensaje">
+                        <h6>Escribí tu mensaje</h6>
+                    </label>
+                    <textarea name="mensaje" id="mensaje" maxlength="700" required></textarea>
+                </div>
+                <input type="submit" class="boton-enviar" value="Enviar">
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <a href="https://www.instagram.com/wis.unla/" target="_blank">
+            <img src="img/compu3.png" alt="logo compu 3" widht="79px" height="45px">
+        </a>
+        <p class="footer">Copyright © 2026 Carro Maia - All rights reserved</p>
+    </footer>
+
+    <!--redes-->
+    <div class="redes-fijo">
+        <a href="https://www.instagram.com/maaaaidg_?vrfl=MTBiZG1qdjFpdGtocA%3D%3D&utm_source=qr" target="_blank">
+            <img src="img/instagram-portfolio.png" alt="Instagram">
+        </a>
+        <a href="https://www.behance.net/maiacarro" target="_blank">
+            <img src="img/behance-portfolio.png" alt="Behance">
+        </a>
+    </div>
+
+</body>
+
+</html>

@@ -5,14 +5,14 @@
     <meta charset="utf-8" />
     <title>Maia Abril Carro - Portfolio</title>
     <link rel="icon" href="img/logo-icon.svg" type="image/logo-icon" sizes="16x16" alt="favicon-cvmaia">
-    <link rel="stylesheet" href="proyectos.css">
+    <link rel="stylesheet" href="estilos.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Cal+Sans&family=Roboto:ital,wdth,wght@0,75..100,100..900;1,75..100,100..900&display=swap');
     </style>
 </head>
 
 <body>
-    <header>
+    <header id="header-top">
         <div class="logo-header">
             <a href="index.html">
                 <img class="logo" src="img/logo-clarito.svg" alt="Logo" width="75px" height="65px">
@@ -25,68 +25,185 @@
         </nav>
 
         <div class="nav-cv-contacto">
-            <a class="cv" href="#cv" target="_self">CV</a>
-            <a class="contacto-header" href="#contacto" target="_blank">¿Hablamos?</a>
+            <a class="cv" href="img/cv_carro_maia.pdf" download="CV-Maia-Carro.pdf" target="_blank">CV</a>
+            <a class="contacto-header" href="contacto.html" target="_self">¿Hablamos?</a>
         </div>
     </header>
 
     <main>
         <section class="proyectos">
             <h2>Proyectos</h2>
-            <article>
-                <!-- Primera caja -->
+            <article id="galeria">
+                <!-- Primera caja: Booklet -->
                 <div class="caja">
                     <div class="contenedor-foto-proyecto">
-                        <img class="foto-normal" src="img/img_booklet.png" alt="Proyecto Booklet violeta">
-                        <img class="foto-hover" src="img/img_booklet_color.png" alt="Proyecto Booklet color">
+                        <img class="foto-normal" src="img/booklet_color.png" alt="Proyecto Booklet violeta">
+                        <img class="foto-hover" src="img/booklet.png" alt="Proyecto Booklet color">
                     </div>
                     <div class="boton-booklet">
-                        <a class="cajas" href="https://www.behance.net/gallery/257175549/BOOKLET-ET2"
-                            target="_blank">BOOKLET | ET2</a>
+                        <button onclick="mostrarGaleria('booklet')" class="cajas">BOOKLET | ET2</button>
                     </div>
                 </div>
 
-                <!-- Segunda caja -->
+                <!-- Segunda caja: Vinilo -->
                 <div class="caja">
                     <div class="contenedor-foto-proyecto">
                         <img class="foto-normal" src="img/vinilo.png" alt="Proyecto Vinilo violeta">
                         <img class="foto-hover" src="img/vinilo_color.png" alt="Proyecto Vinilo color">
                     </div>
                     <div class="boton-vinilo">
-                        <a class="cajas" href="https://www.behance.net/gallery/257126891/Vinilo-Single-D2"
-                            target="_blank">VINILO | D2</a>
+                        <button onclick="mostrarGaleria('vinilo')" class="cajas">VINILO | D2</button>
                     </div>
                 </div>
 
-                <!-- Tercera caja -->
+                <!-- Tercera caja: Sistema -->
                 <div class="caja">
                     <div class="contenedor-foto-proyecto">
                         <img class="foto-normal" src="img/sistema.png" alt="Proyecto Sistema violeta">
                         <img class="foto-hover" src="img/sistema_color.png" alt="Proyecto Sistema color">
                     </div>
                     <div class="boton-sistema">
-                        <a class="cajas" href="https://www.behance.net/gallery/257129489/Sistema-ET2"
-                            target="_blank">SISTEMA | ET2</a>
+                        <button onclick="mostrarGaleria('sistema')" class="cajas">SISTEMA | ET2</button>
                     </div>
                 </div>
 
-                <!-- Cuarta caja -->
+                <!-- Cuarta caja: Branding -->
                 <div class="caja">
                     <div class="contenedor-foto-proyecto">
                         <img class="foto-normal" src="img/piccola.png" alt="Proyecto Branding violeta">
                         <img class="foto-hover" src="img/piccola_color.png" alt="Proyecto Branding color">
                     </div>
                     <div class="boton-branding">
-                        <a class="cajas" href="#" target="_blank">BRANDING | PICCOLA</a>
+                        <button onclick="mostrarGaleria('piccola')" class="cajas">BRANDING | PICCOLA</button>
                     </div>
                 </div>
+
+                <!-- Quinta caja: Editoral -->
+                <div class="caja caja-ancha">
+                    <div class="contenedor-foto-proyecto">
+                        <video class="video-proyecto" src="img/video_editorial.mp4" autoplay muted loop
+                            playsinline></video>
+                    </div>
+                    <div class="boton-editorial">
+                        <button onclick="mostrarGaleria('editorial')" class="cajas">EDITORIAL | COMPU 2</button>
+                    </div>
+                </div>
+
             </article>
+
+            <!--galeria oculta-->
+            <section id="galeriaPopup" class="galeria-popup">
+                <ul>
+                    <li class="popup-completo" id="booklet">
+                        <img src="img/booklet_galeria.png" alt="Proyecto Booklet color">
+                        <div class="popup-der">
+                            <button onclick="ocultarGaleria()">Cerrar ✕</button>
+                            <div class="titulo-proy-popup">
+                                <h3>BOOKLET</h3>
+                                <h2>Espacio Tipográfico 2</h2>
+                            </div>
+                            <p class="descripcion">Booklet destinado a diseñadores, con contenidos dedicados a una
+                                fundidora tipográfica latinoamericana. Cátedra De Losa — UNLa.</p>
+                        </div>
+                    </li>
+
+                    <li class="popup-completo" id="vinilo">
+                        <img src="img/vinilo_galeria.png" alt="Proyecto Vinilo color">
+                        <div class="popup-der">
+                            <button onclick="ocultarGaleria()">Cerrar ✕</button>
+                            <div class="titulo-proy-popup">
+                                <h3>VINILO</h3>
+                                <h2>Taller de Diseño 2</h2>
+                            </div>
+                            <p class="descripcion">Exploración tipográfica a partir de la consigna Tipografía como
+                                imagen. Cátedra Volpe — UNLa.
+                                ​​</p>
+                        </div>
+                    </li>
+
+                    <li class="popup-completo" id="sistema">
+                        <img src="img/sistema_color_galeria.png" alt="Proyecto Sistema color">
+                        <div class="popup-der">
+                            <button onclick="ocultarGaleria()">Cerrar ✕</button>
+                            <div class="titulo-proy-popup">
+                                <h3>SISTEMA</h3>
+                                <h2>Espacio Tipográfico 2</h2>
+                            </div>
+                            <p class="descripcion">Diseño de sistema de piezas gráficas para Tipografía Convoca, un
+                                encuentro regional ficticio de tipografía. Cátedra De Losa — UNLa.</p>
+                        </div>
+                    </li>
+
+                    <li class="popup-completo" id="piccola">
+                        <img src="img/piccola_galeria.png" alt="Proyecto Branding color">
+                        <div class="popup-der">
+                            <button onclick="ocultarGaleria()">Cerrar ✕</button>
+                            <div class="titulo-proy-popup">
+                                <h3>BRANDING</h3>
+                                <h2>Piccola</h2>
+                            </div>
+                            <p class="descripcion">Desarrollo de identidad visual y branding para un emprendimiento de
+                                pastelería y cookies.</p>
+                        </div>
+                    </li>
+                    <li class="popup-completo" id="editorial">
+                        <img src="img/editorial.png" alt="Revista editorial">
+                        <div class="popup-der">
+                            <button onclick="ocultarGaleria()">Cerrar ✕</button>
+                            <div class="titulo-proy-popup">
+                                <h3>EDITORIAL</h3>
+                                <h2>Compu 2</h2>
+                            </div>
+                            <p class="descripcion">Diseño de dispositivo de lectura en formato A5 vertical por página,
+                                aplicando conceptos y técnicas de la cursada. Cátedra Nuñez — UNLa.</p>
+                        </div>
+                    </li>
+                </ul>
+            </section>
         </section>
+    </main>
 
     <footer>
         <a href="https://www.instagram.com/wis.unla/" target="_blank">
             <img src="img/compu3.png" alt="logo compu 3" widht="79px" height="45px">
         </a>
-        <p>Copyright © 2026 Carro Maia - All rights reserved</p>
+        <p class="footer">Copyright © 2026 Carro Maia - All rights reserved</p>
     </footer>
+
+    <!--redes y flecha-->
+    <div class="redes-fijo">
+        <a href="https://www.instagram.com/maaaaidg_?vrfl=MTBiZG1qdjFpdGtocA%3D%3D&utm_source=qr" target="_blank">
+            <img src="img/instagram-portfolio.png" alt="Instagram">
+        </a>
+        <a href="https://www.behance.net/maiacarro" target="_blank">
+            <img src="img/behance-portfolio.png" alt="Behance">
+        </a>
+    </div>
+    <div class="volver-arriba">
+        <a href="#header-top"><img src="img/flecha.png" alt="volver arriba"></a>
+    </div>
+
+    <script>
+        function mostrarGaleria(idProyecto) {
+            document.getElementById("galeriaPopup").style.display = "flex";
+
+            const proyectos = document.querySelectorAll('.popup-completo');
+            proyectos.forEach(p => p.style.display = 'none');
+
+            const seleccionado = document.getElementById(idProyecto);
+            if (seleccionado) {
+                seleccionado.style.display = "flex";
+            }
+        }
+
+        function ocultarGaleria() {
+            document.getElementById("galeriaPopup").style.display = "none";
+            window.location.hash = "";
+        }
+    </script>
+
     </main>
+
+</body>
+
+</html>

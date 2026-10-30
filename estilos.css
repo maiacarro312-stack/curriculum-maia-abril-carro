@@ -85,6 +85,16 @@ h5 {
     margin: 0;
 }
 
+h6 {
+    color: var(--colores-violeta-claro, #FEE9FF);
+    font-family: "Cal Sans";
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin: 0;
+}
+
 p {
     font-family: Roboto;
     font-size: 17px;
@@ -249,7 +259,7 @@ footer {
 }
 
 .footer {
-color: #FFF;
+    color: #FFF;
 }
 
 /*index*/
@@ -296,7 +306,6 @@ color: #FFF;
     flex: 1;
 }
 
-/* Estilos para el cambio de foto al hacer hover */
 .contenedor-foto {
     position: relative;
     width: 350px;
@@ -345,7 +354,7 @@ color: #FFF;
 }
 
 .economia-y-administracion,
-.diseno-y-comunicacion {
+.diseño-y-comunicacion {
     display: flex;
     width: 100%;
     flex-direction: column;
@@ -358,19 +367,19 @@ color: #FFF;
 }
 
 .economia-y-administracion:hover,
-.diseno-y-comunicacion:hover {
+.diseño-y-comunicacion:hover {
     background-color: var(--violeta-intermedio, #875d92);
     border-color: var(--violeta-intermedio, #875d92);
 }
 
 .economia-y-administracion:hover h4,
-.diseno-y-comunicacion:hover h4 {
+.diseño-y-comunicacion:hover h4 {
     color: #FFF;
     transition: color 0.4s ease;
 }
 
 .economia-y-administracion:hover h5,
-.diseno-y-comunicacion:hover h5 {
+.diseño-y-comunicacion:hover h5 {
     color: #FFF;
     transition: color 0.4s ease;
 }
@@ -399,6 +408,7 @@ p.centrado {
     margin: 0;
     box-sizing: border-box;
 }
+
 .logos {
     display: flex;
     justify-content: center;
@@ -487,4 +497,438 @@ p.centrado {
 
 .papeleria h3 {
     padding: 0;
+}
+
+/*proyectos*/
+
+.proyectos {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    gap: 60px;
+    margin: 0 auto;
+}
+
+#galeria {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 45px 52px;
+    width: 100%;
+    max-width: 950px;
+    padding-bottom: 100px;
+}
+
+.caja {
+    border-radius: 25px;
+    background: var(--colores-violeta-oscuro, #4D0261);
+    display: flex;
+    padding: 30px;
+    box-sizing: border-box;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 35px;
+    width: 370px;
+}
+
+.boton-booklet {
+    border-radius: 25px;
+    background: var(--colores-violeta-claro, #FEE9FF);
+    display: flex;
+    width: 171px;
+    height: 40px;
+    padding: 2px 19px 0 21px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.boton-vinilo {
+    border-radius: 25px;
+    background: var(--colores-violeta-claro, #FEE9FF);
+    display: flex;
+    width: 133px;
+    height: 40px;
+    padding: 2px 19px 0 21px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.boton-sistema {
+    border-radius: 25px;
+    background: var(--colores-violeta-claro, #FEE9FF);
+    display: flex;
+    width: 157px;
+    height: 40px;
+    padding: 2px 19px 0 21px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.boton-branding {
+    border-radius: 25px;
+    background: var(--colores-violeta-claro, #FEE9FF);
+    display: flex;
+    width: 216px;
+    height: 40px;
+    padding: 2px 19px 0 21px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.contenedor-foto-proyecto {
+    position: relative;
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.contenedor-foto-proyecto img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    display: block;
+    transition: opacity 0.5s ease;
+}
+
+.contenedor-foto-proyecto .foto-hover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+
+.caja:hover .contenedor-foto-proyecto .foto-hover {
+    opacity: 1;
+}
+
+.cajas {
+    background: transparent;
+    border: none;
+    outline: none;
+    text-align: center;
+    font-family: Roboto;
+    font-size: 19px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 38px;
+    color: var(--colores-violeta-oscuro, #4D0261);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* galeria oculta */
+
+.galeria-popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(77, 2, 97, 0.85);
+    z-index: 9999;
+    align-items: center;
+    justify-content: center;
+}
+
+.galeria-popup ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.popup-completo {
+    display: none;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    background: #FFF;
+    padding: 40px;
+    border-radius: 30px;
+    border: 3px solid var(--colores-violeta-oscuro, #4D0261);
+    width: 90%;
+    max-width: 900px;
+    box-sizing: border-box;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+}
+
+/* estilos internos del pop-up */
+.popup-completo img {
+    max-width: 100%;
+    height: auto;
+    max-height: 450px;
+    border-radius: 15px;
+    object-fit: cover;
+}
+
+.popup-der {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.titulo-proy-popup h3 {
+    color: var(--colores-violeta-oscuro, #4D0261);
+    font-size: 24px;
+    margin: 0;
+    text-align: left;
+}
+
+.titulo-proy-popup h2 {
+    color: #333;
+    font-size: 18px;
+    margin: 5px 0 0 0;
+}
+
+.popup-completo p.descripcion {
+    font-family: Roboto, sans-serif;
+    font-size: 14px;
+    color: #333;
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* Botón de cerrar */
+.popup-completo button {
+    background-color: var(--colores-violeta-oscuro, #4D0261);
+    color: #FFF;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    font-family: Roboto, sans-serif;
+    transition: background-color 0.3s ease;
+}
+
+.popup-completo button:hover {
+    background-color: var(--violeta-intermedio, #875d92);
+}
+
+.caja.caja-ancha {
+    width: 100%;
+    max-width: 786px;
+}
+
+.contenedor-foto-proyecto video {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    display: block;
+    object-fit: cover;
+}
+
+.boton-editorial {
+    border-radius: 25px;
+    background: var(--colores-violeta-claro, #FEE9FF);
+    display: flex;
+    width: 220px;
+    height: 40px;
+    padding: 2px 19px 0 21px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+/*Contacto*/
+
+#main-contacto {
+    gap: 150px;
+    width: 100%;
+    padding: 80px 0;
+}
+
+.contacto {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 80px;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+.izq {
+    max-width: 450px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.formulario {
+    background-color: var(--violeta-oscuro);
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    border: none;
+    border-radius: 24px;
+    padding: 55px;
+    width: 100%;
+    max-width: 800px;
+    box-sizing: border-box;
+}
+
+.datos-persona {
+    display: flex;
+    gap: 70px;
+    width: 100%;
+}
+
+.Nombre,
+.Mail,
+.que-buscas,
+.mensaje {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    flex: 1;
+}
+
+.formulario input[type="text"],
+.formulario input[type="email"] {
+    width: 100%;
+    height: 48px;
+    padding: 0 16px;
+    border: none;
+    border-radius: 12px;
+    background-color: var(--violeta-clarito);
+    color: var(--violeta-oscuro);
+    font-size: 15px;
+    font-family: inherit;
+    outline: none;
+    box-sizing: border-box;
+    margin-top: 10px;
+}
+
+.selecciona {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.checkbox {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 15px;
+    color: var(--violeta-clarito);
+    cursor: pointer;
+    font-family: Roboto;
+    font-size: 19px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 38px;
+    margin: 0;
+}
+
+.checkbox input[type="checkbox"] {
+    appearance: none;
+    width: 27px;
+    height: 26px;
+    background-color: var(--violeta-clarito);
+    border: none;
+    border-radius: 8px;
+    display: grid;
+    place-content: center;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.checkbox input[type="checkbox"]::before {
+    content: "✔";
+    font-size: 14px;
+    color: var(--violeta-clarito);
+    transform: scale(0);
+    transition: transform 0.1s ease-in-out;
+}
+
+.checkbox input[type="checkbox"]:checked {
+    background-color: var(--violeta-intermedio);
+}
+
+.checkbox input[type="checkbox"]:checked::before {
+    transform: scale(1);
+}
+
+.formulario textarea {
+    width: 93%;
+    height: 130px;
+    padding: 14px 16px;
+    border: none;
+    border-radius: 12px;
+    background-color: var(--violeta-clarito);
+    color: var(--violeta-oscuro);
+    font-size: 15px;
+    font-family: inherit;
+    resize: none;
+    outline: none;
+}
+
+.boton-enviar {
+    background-color: var(--violeta-intermedio);
+    color: var(--violeta-clarito);
+    border: none;
+    width: 150px;
+    height: 52px;
+    border-radius: 15px;
+    font-size: 20px;
+    font-weight: 700;
+    cursor: pointer;
+    font-family: "Cal Sans";
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    align-self: flex-end;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.boton-enviar:hover {
+    background-color: var(--violeta-clarito);
+    color: var(--violeta-oscuro);
+}
+
+.redes-fijo {
+    background-color: var(--violeta-oscuro);
+    position: fixed;
+    top: 365px;
+    left: 0px;
+    padding: 25px 15px;
+    border-radius: 0px 15px 15px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+.volver-arriba {
+    background-color: var(--violeta-oscuro);
+    position: fixed;
+    bottom: 200px;
+    right: 0px;
+    padding: 25px 25px;
+    border-radius: 15px 0px 0px 15px;
+}
+
+.volver-arriba img {
+    height: 25px;
+    width: auto;
 }
